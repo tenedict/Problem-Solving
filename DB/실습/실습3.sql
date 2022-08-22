@@ -12,3 +12,4 @@ INSERT INTO classmates VALUES ('후종', 40, '제주');
 SELECT * FROM classmates;
 
 SELECT rorid, * FROM classmates;
+alter table people drop column type;

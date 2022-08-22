@@ -16,3 +16,5 @@ INSERT INTO classmates VALUES (2, '문재윤');
 
 -- 테이블 삭제
 DROP TABLE classmates;
+
+DROP TABLE members;

@@ -21,3 +21,4 @@ SELECT * FROM members;
 -- 3   이호영
 -- 4   박민희
 -- 6   재윤짱123  
+drop table classmates;

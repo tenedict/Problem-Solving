@@ -1,22 +1,23 @@
 --1
 .tables
 --2
---3
+--3 앨범에서 제목을 출력한다 제목 내림차순으로
 SELECT Title
 FROM albums
 ORDER BY title DESC
 LIMIT 5;
---4
+--4 손님에서 고객수로 손님수를 세할린다
 SELECT COUNT(*) '고객 수'
 FROM customers;
-
+--5 미국 사람중 이름 내림차순으로 손님에서 성이랑 이름을 
+-- 출력한다
 SELECT firstname,lastname
 FROM customers
 WHERE country = 'USA'
 ORDER BY firstname DESC
 LIMIT 5;
 
-
+--
 SELECT *
 FROM invoices
 WHERE BillingPostalCode is NULL
@@ -30,16 +31,15 @@ WHERE strftime('%Y',invoicedate)= '2013';
 --9
 SELECT CustomerId 고객ID, FirstName 이름, LastName 성
 FROM customers 
-WHERE 이름 LIKE 'L%' ORDER BY 고객ID;
+WHERE 이름 LIKE 'f%' ORDER BY 고객ID;
 -- 10
-SELECT country, count(*)
+SELECT country, count(*)	
 FROM customers
 group by country;
 --11
 SELECT artistid,count(*) '앨범 수'
 FROM albums
-GROUP BY artistid	Rotenturmstraße 4, 1010 Innere Stadt	Vienne	NULL	Austria	1010	+43 01 5134505	NULL	astrid.gruber@apple.at	5
-8	Daan	Peeters	NULL	Grétrystraat 63
+GROUP BY artistid
 ORDER BY count(*) DESC
 LIMIT 1;
 --12
