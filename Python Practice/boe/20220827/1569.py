@@ -8,6 +8,10 @@ for i in range(n):
     li.append(b)
     list_.append(li)
 
+list_[1]
+
+len_ = len(list_)
 print(list_)
-for a
+for a in list_:
+    
 
