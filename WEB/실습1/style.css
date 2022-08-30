@@ -1,0 +1,32 @@
+/* 아래에 CSS를 작성해주세요. */
+.box { 
+    width: 1200px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);}
+.image {
+    display: inline-block;
+    width: 400px;
+    height: 50rem;
+    margin: 10px;}
+.card {
+    width: 400px;
+    margin: 0px;
+    border-radius: 1rem;
+    }
+
+.image1 {
+    display: inline-block;
+    width: 400px;
+    height: 50rem;
+    margin: 10px;}
+
+.oo{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.color{
+    color: gray;
+    font-size: small;
+}
+
