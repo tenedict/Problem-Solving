@@ -1,1 +1,49 @@
 /* 아래에 CSS를 작성해주세요. */
+.box { 
+    width: 704px;
+    height:1408px;
+    background-color: rgb(255, 255, 255);}
+
+.image {
+    display: inline-block;
+    width: 604px;
+    height: 604px;
+    margin: 10px;
+    border-radius: 10px;}
+.font1 {
+    color: grey;
+    font-size: 24px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+.font2 {
+    font-size: 27px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-weight: 540;
+}
+.font3 {
+    font-size: 41px;
+    color: rgb(53, 196, 239);
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.font4 {
+    font-size: 41px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-weight: bolder;
+}
+.font5 {
+    font-size: 28px;
+    font-weight: bolder;
+    color: rgb(66, 66, 66);
+    padding-left: 20px;
+}
+.font6 {
+    font-size: 28px;
+    font-weight: bolder;
+    padding-left: 10px;
+    color: rgb(153, 153, 153);
+}
