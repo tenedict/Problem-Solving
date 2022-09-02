@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  /* min-width: 1280px; */
+  color: #333333;
+  display:flex;
+  align-items: center;
+  flex-direction: column
+}
+
+.nav {
+  width: 90%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top:0;
+  background-color: white;
+  z-index: 1;
+}
+
+.logo {
+  
+  height: 60px;
+}
+
+.navfont{
+  font-size: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color:black;
+  text-decoration: none;
+  padding: 3px;
+}
+
+.navfont:hover {
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.navmenu {
+  display: flex;
+  align-items: center;
+
+}
+
+.service {
+  display: flex;
+  width: 90%;
+  height: 320px;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-content: flex-end;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.moviecontents {
+  display:flex;
+  width: 90%;
+}
+
+.aside {
+  display:flex;
+  width: 20%;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+
+.moviesection {
+  display:flex;
+  width: 80%;
+  background-color: lightgray;
+  flex-direction: column;
+}
+
+.장르목록 {
+  
+}
+
+.장르 {
+  display: flex;
+  font-size: medium;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0%;
+}
+
+.실시간영화순위 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.movies {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap
+}
+
+.movie {
+  width: 300px;
+  
+  border-radius: 10px;
+  }
+
+.moviebox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.moviebox:hover {
+  border: 5;
+  border-color: black;
+}
+
+.moviename {
+  display: flex;
+  font-size: large;
+  justify-content: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.moviename:hover {
+  text-decoration: none;
+}
+
+.footer {
+  height: 40;
+  position: sticky;
+  display: flex;
+  width: 100%;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+}
+
+.a:hover {
+  text-decoration: none;
+}
+
