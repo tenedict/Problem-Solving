@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우열재윤박스오피스</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+</head>
+<body class="position-relative bg-black">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="./images/logo.png"> 
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="./02_home.html">Home</a>
+            <a class="nav-link" href="./03_community.html">Community</a>
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Login</a>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" >
+                            <label for="exampleFormControlInput1" class="form-label fw-light">We'll never share your email with anyone else.</label>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="password_" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password_" >
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Check me out
+                            </label>
+                        </div>
+
+                        
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+
+                    
+                </div>
+                </div>
+            </div>
+                
+            
+        </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid movieimage">
+        <div class="row">
+            <div class="col-12 bg-dark1 p-5 text-white">
+                <div class="col-4 py-5">
+                    <h2>쇼생크 탈출</h2>
+                    <br>
+                    <p>  1947년 은행 부지점장으로 일하며 승승장구하던 앤디 듀프레인은 아내와 아내의 프로골퍼 정부를 살해했다는 누명을 뒤집어쓰고, 2번의 종신형을 선고받아 쇼생크 교도소에 갇힌다</p>
+                    
+                    <button type="button" href="" class="btn  bg-dark bg-opacity-50 btn-lg text-white onhit" data-bs-toggle="modal" data-bs-target="#info">ⓘ 상세정보</button>
+                    
+            <!-- 모달 -->
+
+                    <div class="modal fade " id="info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog ">
+                        <div class="modal-content bg-black ">
+                            
+                            <div class="position-relative">
+                                <img class="img-fluid" src="./images/movie1.jpg">
+                                <button type="button" class="btn-close bg-light position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="m-5">   
+                                    <h2>쇼생크 탈출</h2>
+                                    <p class="fw-light color">The Shawshank Redemption</p>
+                                    <hr>
+                                    <p><span class="fw-bold">개요</span> 드라마 미국 142분</p>
+                                    <p><span class="fw-bold">감독</span> 프랭크 다라본트</p>
+                                    <p><span class="fw-bold">출연</span> 팀 로빈스, 모건 프리먼</p>
+                                    <p><span class="fw-bold">등급</span> [국내]15세 관람가</p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        
+    </div>
+
+    <div class="container my-5">
+
+        
+        <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/F0B7HDiY-10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-white mt-1 fs-4">예고편1</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/Y8JFxS1HlDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-white mt-1 fs-4">예고편2</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/--FmExEAsM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-white mt-1 fs-4">예고편3</p>
+                </div>
+
+                
+        </div>
+
+                    
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="text-center py-3 bg-white  text-dark position-absolute w-100">
+        Web-bootstrap PJT, by WooYeol & JaeYun 
+    </footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
