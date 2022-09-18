@@ -64,21 +64,58 @@
         //     console.log(i)
         // }
         // }
-        const name = function (args) {
-            return args += 1
-        }
-        name(1)
+        // const name = function (args) {
+        //     return args += 1
+        // }
+        // name(1)
         
-        const add = function (num1, num2) {
-            console.log(num1 + num2)
-        }
-        add(1, 235253)
+        // const add = function (num1, num2) {
+        //     console.log(num1 + num2)
+        // }
+        // add(1, 235253)
 
-        const greeting = function (name = 'Anonymous') {
-            return `Hi ${name}`
-        }
-        greeting()
+        // const greeting = function (name = 'Anonymous') {
+        //     return `Hi ${name}`
+        // }
+        // greeting()
 
+        let g = 9
+
+
+
+        switch(g) {
+            case 8: {
+                console.log(1)
+                break
+                }
+
+            case 9: {
+                console.log('x')
+                break
+                }
+
+            default: {
+                console.log(xx)
+                }
+        }
+
+        const fruits = ['딸기','바나나','참외']
+        for (let fruit of fruits) {
+            fruit = fruit +'!'
+            console.log(fruit)
+        }
+
+        function piona(h,g,j) {
+            console.log(h+g+j)
+        }
+        const jojo = [3,2,23]
+        piona(...jojo)
+
+        
+        const add = function (h,g,...j) {
+            return[h,g,j]
+            }
+        console.log(add(1,2))
     </script>
     
 </body>
