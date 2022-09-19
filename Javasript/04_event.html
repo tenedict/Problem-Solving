@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .blue {
+      color: blue;
+    }
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>이건 <span>복습말고</span> 느낌만..</h1>
+  <button id="btn1">클릭</button>
+  <input type="text">
+  <button id="btn2">클릭</button>
+  <button onclick="alertMessage()">날 눌러</button>
+  <button id="mb">날 눌러</button>
+  
+  
+  <p id="mytext"></p>
+  <form action="#">
+    <label for="mti">입력해</label>
+    <input id="mti" type="text">
+  </form>
+
+  <h2>새깔</h2>
+  <label for="cci">색깔</label>
+  <input id="cci"></input>
+  <hr>
+
+  <script>
+    // btn1
+    const btn1 = document.querySelector('#btn1')
+    // btn1이 클릭되면 함수실행
+    btn1.addEventListener('click', function() {
+      // h1 태그를 잡아서
+      const h1 = document.querySelector('span')
+      // 클래스 blue를 토글하자. 
+      h1.classList.toggle('blue')
+      alert('쏘쏘쏘쏘')
+      console.log(event)
+    })
+
+    const btn2 = document.querySelector('#btn2')
+    // btn2이 클릭되면 함수실행
+    btn2.addEventListener('click', function() {
+      // h1 태그를 잡아서
+      const h1 = document.querySelector('span')
+      // 클래스 blue를 토글하자. 
+      h1.classList.toggle('red')
+      alert('쏘쏘')
+      console.log(event)
+    })
+
+    const alertMessage = function() {
+      alert('메롱')
+      conole.log('ee')}
+      const mb = document.querySelector('#mb')
+      mb.addEventListener('click',alertMessage)
+
+    
+
+    // input
+    const input = document.querySelector('input')
+    input.addEventListener('input', function(e) {
+      console.log(e.target.value)
+    })
+
+    const mti = document.querySelector('#mti')
+    mti.addEventListener('input',function(event) {
+      const myPtag = document.querySelector('#mytext')
+      myPtag.innerText = event.target.value
+    })
+
+    const colorinput = document.querySelector('#cci')
+    const changecolor = function (event) {
+      const h2tag = document.querySelector('h2')
+      h2tag.style.color = event.target.value
+    }
+    colorinput.addEventListener('input',changecolor)
+  </script>
+</body>
+</html>
