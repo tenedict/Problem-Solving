@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <style>
+        .ball1 {
+            width: 10rem;
+            height: 10rem;
+            background: yellow;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 10rem;
+            font-size: xx-large;
+            font-weight:  bold;
+            margin: 1rem;
+        }
+
+        .ball2 {
+            width: 10rem;
+            height: 10rem;
+            background: blue;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 10rem;
+            font-size: xx-large;
+            font-weight:  bold;
+            margin: 1rem;
+        }
+
+        .ball3 {
+            width: 10rem;
+            height: 10rem;
+            background: red;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 10rem;
+            font-size: xx-large;
+            font-weight:  bold;
+            margin: 1rem;
+        }
+
+        .ball4 {
+            width: 10rem;
+            height: 10rem;
+            background: grey;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 10rem;
+            font-size: xx-large;
+            font-weight:  bold;
+            margin: 1rem;
+        }
+
+        .ball5 {
+            width: 10rem;
+            height: 10rem;
+            background: green;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 10rem;
+            font-size: xx-large;
+            font-weight:  bold;
+            margin: 1rem;
+        }
+        .ball-con {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>로또</h1>
+    <button id="lotto">뽑아</button>
+    <div id="result"></div>
+    <div class="ball-con">
+        
+    </div>
+
+    <script>
+        const button = document.querySelector('#lotto')
+        button.addEventListener('click',function() {
+            const ballcon = document.createElement('div')
+            ballcon.classList.add('ball-con')
+            const ball = document.createElement('div')
+            ball.classList.add('ball')
+            const randomint = Math.floor(Math.random() * 45) + 1;
+            ball.innerText = randomint
+            ballcon.appendChild(ball)
+            const result = document.querySelector('#result')
+            result.appendChild(ballcon)
+        })
+    </script>
+</body>
+</html>
