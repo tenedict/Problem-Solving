@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1등 당첨 사이트</title>
+    <style>
+        .ball {
+            width: 10rem;
+            height: 10rem;
+            background: yellow;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 10rem;
+            font-size: xx-large;
+            font-weight:  bold;
+            margin: 1rem;
+            
+            color: rgb(27, 33, 33);
+            
+        }
+
+        
+        .ball-con {
+            display: inline-block;
+        }
+        .inn {
+            width: 72rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .paper { 
+            width: 5rem;
+            height: 3rem;
+            background-color: blanchedalmond;
+            font-weight: bolder;
+            font-size: large;
+        }
+        .bg {
+            background-color: brown;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+    </style>
+</head>
+<body class="bg">
+    <div class="inn">
+        <h1 style="color:azure">인생은 한방이야~~</h1>
+        <button class="paper" id="lotto">눌러</button>
+        <div id="result"></div>
+        <div class="ball-con">
+            
+        </div>
+    </div>
+
+    <script>
+        const button = document.querySelector('#lotto')
+        button.addEventListener('click',function() {
+            
+            
+            let i = 0
+            
+            while (i <6) {
+                const ballcon = document.createElement('div')
+                ballcon.classList.add('ball-con')
+                const randomint = Math.floor(Math.random() * 45) + 1;
+                const ballcolor = document.createElement('div')
+                ballcolor.classList.add('ball')
+                ballcolor.innerText = randomint
+                ballcon.appendChild(ballcolor)
+                const result = document.querySelector('#result')
+                result.appendChild(ballcon)
+                    if (randomint < 10) {
+                        ballcolor.style.backgroundColor ='yellow'
+                        
+                    }
+                    if (randomint >= 10 && randomint < 20) {
+                        ballcolor.style.backgroundColor ='blue'
+                        
+                    }
+                    if (randomint < 30 && randomint >= 20) {
+                        ballcolor.style.backgroundColor ='red'
+                        
+                    }
+                    if (randomint < 40 && randomint >= 30) {
+                        ballcolor.style.backgroundColor ='grey'
+                        
+                    }
+                    if (randomint <= 45 && randomint >= 40) {
+                        ballcolor.style.backgroundColor ='green'
+                        
+                    }
+                        i++
+                }
+                
+                
+        })
+    </script>
+</body>
+</html>
+<!-- if (i===6) {ballcon.style.display = 'inline'} -->

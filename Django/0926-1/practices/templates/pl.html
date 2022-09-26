@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+{% block content %}
+<div class="container mt-5 text-center">
+    <h1> 전생을 알고 싶으신가요?</h1>
+    <form action="/pl1" method="GET">
+        <label>이름을 적어주세요.</label><br>
+        <input type="text" name="name">
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}

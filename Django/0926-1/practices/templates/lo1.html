@@ -1,0 +1,8 @@
+{%extends 'base.html'%}
+{% block content %}
+<div class="container mx-5 my-5">
+    <h1 class="my-5">뉴스 소비 급증한 생활·문화 ‘네이버 기사’ 봤더니</h1>
+    {% for i in ans %}
+    <h5 class="mx-5">{{i}}</h5>
+    {% endfor %}
+    {% endblock %}
