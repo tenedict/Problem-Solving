@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{% block content %}
+<h1>방명록</h1>
+<div>
+    <form action="/articles/create/" method="=GET">
+        <input type="text" name="content">
+        <input type="submit">
+        <br>
+        ​{% for o in gb %}
+        {{ o.content }}
+        {% endfor %}
+    </form>
+</div>
+{% endblock %}

@@ -2,11 +2,11 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html")
+    return render(request, "practice/index.html")
 
 
 def ping(request):
-    return render(request, "ping.html")
+    return render(request, "practice/ping.html")
 
 
 def pong(request):
@@ -18,5 +18,4 @@ def pong(request):
     context = {
         "name": name,
     }
-    return render(request, "pong.html", context)
-
+    return render(request, "practice/pong.html", context)
