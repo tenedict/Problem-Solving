@@ -2,7 +2,7 @@
 {% block content %}
 <h1>방명록</h1>
 <div>
-    <form action="/articles/create/" method="=GET">
+    <form action="{% url 'articles:create' %}" method="=GET">
         <input type="text" name="content">
         <input type="submit">
         <br>

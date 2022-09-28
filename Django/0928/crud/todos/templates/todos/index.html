@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>메인</h1>
+    <form action="{% url 'todos:create' %} ">
+        할일:<input type="text" name="content" id="" maxlength="80"><br>
+        우선순위:<input type="text" name="priority" id="" maxlength="80"><br>
+        마감기한:<input type="date" name="deadline" id="" maxlength="80"><br>
+        <input type="submit" value="할 일 추가">
+    </form>
+
+    {% for todo in todos %}
+    {% if todo.complete %}
+    <li>{{ todo.id }}-{{ todo.content }}-{{ todo.priority }}-{{ todo.completed }}<a
+            href="/todos/edit/{{ todo.id }}">수정</a>
+        <a href="/todos/delete/{{ todo.id }}">삭제</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+
+</body>
+
+</html>
