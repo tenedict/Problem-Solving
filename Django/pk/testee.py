@@ -1,0 +1,5 @@
+x = input().strip("[""]""\'"",")
+x = x.replace(",", "")
+x = x.replace("\'", "")
+types1 =  list(x.split())
+print(types1)
