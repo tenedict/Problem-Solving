@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="mt-5 ">
+
+    {% for movie in movies %}
+    <a href="{% url 'movie:detail' movie.pk %}">
+        <button type="button" class="btn btn-outline-dark w-100 my-2">
+            <h4>{{ movie.title}}</h4>
+        </button>
+    </a>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

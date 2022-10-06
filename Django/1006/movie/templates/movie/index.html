@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="mt-0 text-center">
+    <img class='w-100' src="{% static '/images/body.jpg' %}" alt="">
+
+</div>
+
+
+{% endblock %}

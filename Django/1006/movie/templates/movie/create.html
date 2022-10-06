@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+<div class="mt-5">
+    <h1>운동추가</h1>
+</div>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {% bootstrap_form movie_form %}
+
+
+    {% bootstrap_button button_type="submit" content="OK" %}
+</form>
+{% endblock %}

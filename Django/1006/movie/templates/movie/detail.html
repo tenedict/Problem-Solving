@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+<p>Exercise No.{{ movie.pk }}</p>
+<div class="mt-5">
+    <h1 class="mt-5">{{ movie.title }} </h1>
+    <p>{{ movie.summary }} </p>
+    <p>10rm: {{ movie.weight }}kg </p>
+    <p>{{ movie.part }} </p>
+    <p>{{ movie.active }} </p>
+    <a href="{% url 'movie:update' movie.pk %}"><button type="button" class="btn btn-outline-dark">운동수정하기</button></a>
+    
+</div>
+{% endblock %}
