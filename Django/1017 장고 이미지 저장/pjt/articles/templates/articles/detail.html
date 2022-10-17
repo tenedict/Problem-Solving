@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+
+{% block content  %}
+    <div class="">
+        <img src="{{ article.image.url }}">
+        <h1>{{ article.title}}</h1>
+        <h5>{{ article.content}}
+    </div>
+
+{% endblock %}

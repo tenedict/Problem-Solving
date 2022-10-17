@@ -3,9 +3,13 @@
 
 
 {% block content  %}
+    <a href="{% url 'articles:create' %}">글작성<a>
     {% for article in articles %}
-        <img src="{{ article.thumnail.url }}">
-        <h5>{{ article.title}}<h5>
+        <a href="{% url 'articles:detail' article.pk %}" >
+            <img src="{{ article.image.url }}">
+            <h5>{{ article.title}}<h5>
+        </a>
     {% endfor %}
+
 
 {% endblock %}
