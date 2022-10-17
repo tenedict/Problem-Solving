@@ -9,4 +9,13 @@
         <h5>{{ article.content}}
     </div>
 
+    <div>
+        <a href="{% url 'articles:update' article.pk %}">
+        글 수정하기
+        </a>
+        <a href="{% url 'articles:delete' article.pk %}">
+            글 삭제하기
+            </a>
+    </div>
+
 {% endblock %}
