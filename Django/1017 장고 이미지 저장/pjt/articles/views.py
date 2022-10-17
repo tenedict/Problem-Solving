@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import ArticleForm
 from .models import Article
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -15,6 +16,7 @@ def create(request):
         article_form = ArticleForm(request.POST, request.FILES)
         if article_form.is_valid():
             article_form.save()
+            messages.success(request, '글이 생성되었습니다.')
             return redirect('articles:index')
     else:
         article_form = ArticleForm()
@@ -29,6 +31,7 @@ def update(request, pk):
         article_form = ArticleForm(request.POST, request.FILES, instance=article)
         if article_form.is_valid():
             article_form.save()
+            messages.info(request, '글이 수정되었습니다.')
             return redirect('articles:detail', article.pk)
     else:
         article_form = ArticleForm(instance=article)
@@ -47,5 +50,6 @@ def detail(request, pk):
 
 def delete(request, pk):
     Article.objects.get(pk=pk).delete()
+    messages.warning(request, '글이 삭제되었습니다.')
     return redirect('articles:index')
 
