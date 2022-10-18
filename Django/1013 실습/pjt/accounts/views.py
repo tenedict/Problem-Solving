@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from accounts.models import User
 from .forms import CustomerUserCreationForm, CustomUserChangeForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login as auth_login
@@ -12,6 +13,7 @@ def signup(request):
         form = CustomerUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
+            auth_login(request, user) 
             return redirect("articles:index")
     else:
         form = CustomerUserCreationForm()
@@ -25,7 +27,7 @@ def login(request):
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
             auth_login(request, form.get_user())
-            return redirect('articles:index')
+            return redirect(request.GET.get('next') or'articles:index')
     else:
         form = AuthenticationForm()
     context = {
@@ -37,23 +39,24 @@ def logout(request):
     auth_logout(request)
     return redirect('articles:index')
 
-@login_required
-def update(request):
-    if request.method == 'POST':
-        form = CustomUserChangeForm(request.POST, instance=request.user)
-        if form.is_valid():
-            form.save()
-            return redirect('articles:index')
-    else:
-        form = CustomUserChangeForm(instance=request.user)
-    context = {
-        'form' : form
-    }
-    return render(request, 'accounts/update.html', context)
-
 def detail(request, pk):
     user = get_user_model().objects.get(pk=pk)
     context = {
         'user': user
     }
     return render(request, 'accounts/detail.html', context)
+
+@login_required
+def update(request):
+    if request.method == 'POST':
+        form = CustomUserChangeForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('accounts:detail', request.user.pk)
+            # return redirect('articles:index')
+    else:
+        form = CustomUserChangeForm(instance=request.user)
+    context = {
+        'form' : form
+    }
+    return render(request, 'accounts/update.html', context)
