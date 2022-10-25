@@ -7,6 +7,17 @@
         <h5>{{ article.content }}</h5>
         <p>작성자 | {{ article.user }}</p>
     </div>
+    <div>
+        <form action="{% url 'articles:like' article.pk %}" method="POST">
+        {% csrf_token %}
+        {% if request.user in article.like.all %}
+        <input type="submit" value="좋아요 취소">
+        {% else %}
+        <input type="submit" value="좋아요">
+        {% endif %}
+        </form>
+        {{ article.like.count }}
+    </div>
     <hr>
     <div class="bg-secondary text-white rounded py-5 px-5">
         <h4 class="my-3">댓글</h4>

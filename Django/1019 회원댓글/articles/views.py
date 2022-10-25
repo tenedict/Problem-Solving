@@ -65,3 +65,11 @@ def delete(request, pk):
     else:
         messages.warning(request, '작성자만 삭제할 수 있습니다.')
         return redirect('articles:index')
+
+def like(request, pk):
+    article = Article.objects.get(pk=pk)
+    if request.user in article.like.all():
+        article.like.remove(request.user)
+    else:
+        article.like.add(request.user)
+    return redirect('articles:detail', pk)
