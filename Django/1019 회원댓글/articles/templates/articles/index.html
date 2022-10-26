@@ -24,7 +24,9 @@
     {% for article in articles %}
     <div class="col-4 my-3 ">
         <div class="card  ">
-            
+            <p>
+                <b>작성자 : <a href="{% url 'accounts:detail' article.user.pk %}">{{ article.user }}</a></b>
+            </p>
             <a href="{% url 'articles:detail' article.pk %} " class="text-decoration-none">
                 <div class="card-body d-flex justify-content-between cardbaby">
                     <h5 class="card-title text-dark">{{ article.title }}<span>(</span>{{ article.comment_set.count}}<span>)</span></h5>
