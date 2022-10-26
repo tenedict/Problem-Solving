@@ -65,11 +65,15 @@ def delete(request, pk):
     else:
         messages.warning(request, '작성자만 삭제할 수 있습니다.')
         return redirect('articles:index')
-
+from django.http import JsonResponse
 def like(request, pk):
     article = Article.objects.get(pk=pk)
     if request.user in article.like.all():
         article.like.remove(request.user)
+        is_liked = False
     else:
         article.like.add(request.user)
-    return redirect('articles:detail', pk)
+        is_liked = True
+    
+    context = {'isLiked': is_liked, 'likeCount': article.like.count()}
+    return JsonResponse(context)
